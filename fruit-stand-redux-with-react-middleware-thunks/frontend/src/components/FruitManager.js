@@ -1,18 +1,18 @@
 import React from 'react';
-import FruitListContainer from './FruitListContainer';
-import FruitSellerContainer from './FruitSellerContainer';
-import FruitQuickAddContainer from './FruitQuickAddContainer';
-import FruitBulkAddContainer from './FruitBulkAddContainer';
+import FruitList from './FruitList';
+import FruitSeller from './FruitSeller';
+import FruitQuickAdd from './FruitQuickAdd';
+import FruitBulkAdd from './FruitBulkAdd';
 
-const FruitManager = () => {
+const FruitManager = ({ fruit, distinctFruit, add, addBulk, sell, sellAll }) => {
   return (
     <div>
       <h2>Available Fruit</h2>
-      <FruitListContainer />
+      <FruitList fruit={fruit} />
       <h2>Fruit Inventory Manager</h2>
-      <FruitSellerContainer />
-      <FruitQuickAddContainer />
-      <FruitBulkAddContainer />
+      <FruitSeller distinctFruit={distinctFruit} sell={sell} sellAll={sellAll} />
+      <FruitQuickAdd add={add} />
+      <FruitBulkAdd addBulk={addBulk} />
     </div>
   );
 };

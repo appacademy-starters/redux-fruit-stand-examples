@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { payFarmer } from '../actions/farmersActions';
+import { hireFarmer, payFarmer } from '../actions/farmersActions';
 import { getAllFarmers } from '../reducers/farmersSelectors';
-import FarmerList from './FarmerList';
+import FarmerManager from './FarmerManager';
 
 const mapStateToProps = (state) => ({
   farmers: getAllFarmers(state),
@@ -9,11 +9,12 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   pay: (id) => dispatch(payFarmer(id)),
+  hire: (name) => dispatch(hireFarmer(name)),
 });
 
-const FarmerListContainer = connect(
+const FarmerManagerContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(FarmerList)
+)(FarmerManager);
 
-export default FarmerListContainer;
+export default FarmerManagerContainer;

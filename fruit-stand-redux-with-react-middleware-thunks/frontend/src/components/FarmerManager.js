@@ -1,13 +1,13 @@
 import React from 'react';
-import FarmerListContainer from './FarmerListContainer';
-import FarmerHireContainer from './FarmerHireContainer';
+import FarmerList from './FarmerList';
+import FarmerHire from './FarmerHire';
 
-const FarmerManager = () => {
+const FarmerManager = ({ farmers, pay, hire }) => {
   return (
     <div>
       <h2>Farmer Manager</h2>
-      <FarmerListContainer />
-      <FarmerHireContainer />
+      <FarmerList farmers={farmers} pay={pay} />
+      <FarmerHire hire={hire} />
     </div>
   );
 };

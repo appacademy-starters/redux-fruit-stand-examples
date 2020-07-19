@@ -93,9 +93,9 @@ router.delete('/multiple',
   asyncHandler(async (req, res) => {
     const { fruitIDs } = req.body;
     const fruitsToSell = await Fruit.findAll({ where: { id: { [Op.in]: fruitIDs } } });
-    const fruitIDsToSell = fruitsToSell.map((f) => f.id);
+    const fruitIDsToSell = fruitsToSell.map((fruit) => fruit.id);
     await Fruit.destroy({ where: { id: { [Op.in]: fruitIDsToSell } } });
-    const fruitsToReturn = fruitsToSell.map((f) => ({ id: f.id, name: f.name }));
+    const fruitsToReturn = fruitsToSell.map((fruit) => ({ id: fruit.id, name: fruit.name }));
     res.status(200).json({ soldFruits: fruitsToReturn });
   }));
 

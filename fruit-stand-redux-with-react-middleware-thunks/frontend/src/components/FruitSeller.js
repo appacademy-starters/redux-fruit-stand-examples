@@ -10,8 +10,8 @@ const FruitSeller = ({ distinctFruit, sell, sellAll }) => {
   return (
     <div>
       <h3>Sell</h3>
-      {distinctFruit.map((f, idx) => (
-        <button key={idx} onClick={handleSellClick}>{f}</button>
+      {distinctFruit.map((fruitName, index) => (
+        <button key={index} onClick={handleSellClick}>{fruitName}</button>
       ))}
       <button onClick={sellAll}>SELL OUT</button>
     </div>

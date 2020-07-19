@@ -35,8 +35,8 @@ class FruitSeller extends React.Component {
     return (
       <div>
         <h3>Sell</h3>
-        {distinctFruit.map((f) => (
-          <button onClick={this.sellFruitClick}>{f}</button>
+        {distinctFruit.map((fruitName, index) => (
+          <button key={index} onClick={this.sellFruitClick}>{fruitName}</button>
         ))}
         <button onClick={this.sellOutClick}>SELL OUT</button>
       </div>

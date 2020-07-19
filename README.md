@@ -40,15 +40,11 @@ modifying when processing an action.
 ## Redux with React: Containers
 
 This example moves all of the store integration out of the presentational
-components into container components. Container components are manually built as
-a way to introduce the pattern of separating store logic from rendering logic.
+components into container components. Container components
+(`FruitManagerContainer` and `FarmerManagerContainer`) are manually built as a
+way to introduce the pattern of separating store logic from rendering logic.
 
-* [fruit-stand-redux-with-react-containers] - Adds container components for the
-  `FruitManager` and `FarmerManager` components. This approach results in a fair
-  amount of prop threading.
-* [fruit-stand-redux-with-react-containers-alt] - Adds container components for
-  each component that needs to interact with the store. This approach results in
-  more container components but less prop threading.
+[fruit-stand-redux-with-react-containers]
 
 ## Redux with React: Generic Container
 
@@ -300,10 +296,9 @@ Sample response body:
 
 [fruit-stand-redux]: ./fruit-stand-redux
 [fruit-stand-redux-with-react]: ./fruit-stand-redux-with-react
-[fruit-stand-redux-with-react-containers]: ./fruit-stand-redux-with-react-containers
-[fruit-stand-redux-with-react-containers-alt]: ./fruit-stand-redux-with-react-containers-alt
-[fruit-stand-redux-with-react-generic-container]: ./fruit-stand-redux-with-react-generic-container
 [fruit-stand-redux-with-react-multiple-reducers]: ./fruit-stand-redux-with-react-multiple-reducers
+[fruit-stand-redux-with-react-containers]: ./fruit-stand-redux-with-react-containers
+[fruit-stand-redux-with-react-generic-container]: ./fruit-stand-redux-with-react-generic-container
 [fruit-stand-redux-with-react-official-bindings]: ./fruit-stand-redux-with-react-official-bindings
 [fruit-stand-redux-with-react-middleware-thunks]: ./fruit-stand-redux-with-react-middleware-thunks
 

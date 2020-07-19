@@ -15,8 +15,10 @@ class FarmerHire extends React.Component {
 
   hireFarmerClick = () => {
     const { farmerName } = this.state;
-    this.props.hire(farmerName);
-    this.setState({ farmerName: '' })
+    if (farmerName) {
+      this.props.hire(farmerName);
+      this.setState({ farmerName: '' });
+    }
   }
 
   render() {

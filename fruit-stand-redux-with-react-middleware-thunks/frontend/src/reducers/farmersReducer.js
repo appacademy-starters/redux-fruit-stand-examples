@@ -10,7 +10,7 @@ const farmersReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_FARMERS:
       const farmers = {};
-      action.farmers.forEach((f) => farmers[f.id] = f);
+      action.farmers.forEach((farmer) => farmers[farmer.id] = farmer);
       return farmers;
     case RECEIVE_ADDED_FARMER:
       nextState[action.farmer.id] = action.farmer;

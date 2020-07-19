@@ -7,10 +7,10 @@ const fruitReducer = (state = [], action) => {
     case ADD_FRUITS:
       return [...state, ...action.fruits];
     case SELL_FRUIT:
-      const idx = state.indexOf(action.fruit);
-      if (idx !== -1) {
+      const index = state.indexOf(action.fruit);
+      if (index !== -1) {
         // remove first instance of action.fruit
-        return [...state.slice(0, idx), ...state.slice(idx + 1)];
+        return [...state.slice(0, index), ...state.slice(index + 1)];
       }
       return state; // if action.fruit is not in state, return previous state
     case SELL_OUT:

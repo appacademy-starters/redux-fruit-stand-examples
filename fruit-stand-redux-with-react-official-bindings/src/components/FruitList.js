@@ -4,7 +4,7 @@ const FruitList = ({ fruit }) => {
   return (
     <div>
       {fruit.length > 0
-        ? <ul>{fruit.map((f, idx) => <li key={idx}>{f}</li>)}</ul>
+        ? <ul>{fruit.map((fruitName, index) => <li key={index}>{fruitName}</li>)}</ul>
         : <span>No fruit currently in stock!</span>
       }
     </div>

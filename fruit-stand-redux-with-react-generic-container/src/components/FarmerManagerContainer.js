@@ -1,6 +1,6 @@
 import connect from '../connect';
-import { payFarmer } from '../actions/farmersActions';
-import FarmerList from './FarmerList';
+import { hireFarmer, payFarmer } from '../actions/farmersActions';
+import FarmerManager from './FarmerManager';
 
 const mapStateToProps = (state) => ({
   farmers: Object.keys(state.farmers)
@@ -9,11 +9,12 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   pay: (id) => dispatch(payFarmer(id)),
+  hire: (name) => dispatch(hireFarmer(name)),
 });
 
-const FarmerListContainer = connect(
+const FarmerManagerContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(FarmerList)
+)(FarmerManager);
 
-export default FarmerListContainer;
+export default FarmerManagerContainer;

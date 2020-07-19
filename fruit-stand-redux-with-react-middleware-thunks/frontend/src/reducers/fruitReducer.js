@@ -12,7 +12,7 @@ const fruitReducer = (state = [], action) => {
     case RECEIVE_ADDED_FRUITS:
       return [...state, ...action.addedFruits];
     case REMOVE_SOLD_FRUITS:
-      return state.filter(f => !action.soldFruits.includes(f.id));
+      return state.filter((fruitObj) => !action.soldFruits.includes(fruitObj.id));
     default:
       return state;
   }

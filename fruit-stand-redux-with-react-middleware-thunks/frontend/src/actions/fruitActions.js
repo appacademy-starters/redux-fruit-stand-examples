@@ -76,5 +76,5 @@ export const sellOut = () => (dispatch, getState) => {
 
 const removeSoldFruits = (soldFruits) => ({
   type: REMOVE_SOLD_FRUITS,
-  soldFruits: soldFruits.map((f) => f.id),
+  soldFruits: soldFruits.map((fruit) => fruit.id),
 });

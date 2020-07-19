@@ -15,11 +15,13 @@ class FruitBulkAdd extends React.Component {
 
   addFruitsClick = () => {
     const { fruitToAdd } = this.state;
-    const fruit = fruitToAdd
-      .split(' ')
-      .map((f) => f.toUpperCase());
-    this.props.addBulk(fruit);
-    this.setState({ fruitToAdd: '' })
+    if (fruitToAdd) {
+      const fruit = fruitToAdd
+        .split(' ')
+        .map((fruitName) => fruitName.toUpperCase());
+      this.props.addBulk(fruit);
+      this.setState({ fruitToAdd: '' });
+    }
   }
 
   render() {
