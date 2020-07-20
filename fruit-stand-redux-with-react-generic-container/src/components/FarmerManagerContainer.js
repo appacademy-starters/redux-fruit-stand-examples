@@ -13,8 +13,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const FarmerManagerContainer = connect(
+  FarmerManager,
   mapStateToProps,
   mapDispatchToProps
-)(FarmerManager);
+);
 
 export default FarmerManagerContainer;

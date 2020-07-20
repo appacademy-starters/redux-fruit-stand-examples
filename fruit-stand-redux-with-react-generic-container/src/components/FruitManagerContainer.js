@@ -20,8 +20,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const FruitManagerContainer = connect(
+  FruitManager,
   mapStateToProps,
   mapDispatchToProps
-)(FruitManager);
+);
 
 export default FruitManagerContainer;
