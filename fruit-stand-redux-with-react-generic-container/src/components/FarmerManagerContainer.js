@@ -12,10 +12,8 @@ const mapDispatchToProps = (dispatch) => ({
   hire: (name) => dispatch(hireFarmer(name)),
 });
 
-const FarmerManagerContainer = connect(
+export default connect(
   FarmerManager,
   mapStateToProps,
   mapDispatchToProps
 );
-
-export default FarmerManagerContainer;

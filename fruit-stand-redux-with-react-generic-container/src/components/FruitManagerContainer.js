@@ -19,10 +19,8 @@ const mapDispatchToProps = (dispatch) => ({
   sellAll: () => dispatch(sellOut()),
 });
 
-const FruitManagerContainer = connect(
+export default connect(
   FruitManager,
   mapStateToProps,
   mapDispatchToProps
 );
-
-export default FruitManagerContainer;
