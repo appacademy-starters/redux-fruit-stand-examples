@@ -23,8 +23,7 @@ class FarmerList extends React.Component {
   render() {
     const { farmers } = store.getState();
 
-    const farmersList = Object.keys(farmers)
-      .map(id => farmers[id]);
+    const farmersList = Object.values(farmers);
 
     return (
       <div>

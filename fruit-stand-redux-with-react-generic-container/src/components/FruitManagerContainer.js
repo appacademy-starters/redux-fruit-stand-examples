@@ -20,7 +20,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(
-  FruitManager,
   mapStateToProps,
   mapDispatchToProps
-);
+)(FruitManager);

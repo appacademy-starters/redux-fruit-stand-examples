@@ -3,8 +3,7 @@ import { hireFarmer, payFarmer } from '../actions/farmersActions';
 import FarmerManager from './FarmerManager';
 
 const mapStateToProps = (state) => ({
-  farmers: Object.keys(state.farmers)
-    .map(id => state.farmers[id]),
+  farmers: Object.values(state.farmers),
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -13,7 +12,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(
-  FarmerManager,
   mapStateToProps,
   mapDispatchToProps
-);
+)(FarmerManager);

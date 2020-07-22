@@ -26,8 +26,7 @@ class FarmerManagerContainer extends React.Component {
 
   render() {
     const { farmers: farmersState } = store.getState();
-    const farmers = Object.keys(farmersState)
-      .map(key => farmersState[key]);
+    const farmers = Object.values(farmersState);
 
     return (
       <FarmerManager
